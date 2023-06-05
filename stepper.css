@@ -1,0 +1,88 @@
+.stepper {
+  width: 80%;
+  display: flex;
+}
+
+li {
+  display: inline-block;
+  position: relative;
+  margin-top: 32px;
+}
+
+li + li {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+li + li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4px;
+  background-color: chartreuse;
+  top: -16px;
+  width: 100%;
+  left: 0px;
+}
+
+.item {
+  position: relative;
+  padding-top: 8px;
+  margin-left: auto;
+  margin-right: 0;
+  z-index: 1;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: bisque;
+  top: -32px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.start {
+  position: relative;
+}
+
+.start::before {
+  position: absolute;
+  content: "低";
+  top: -34px;
+  right: 6px;
+}
+
+.center {
+  position: relative;
+}
+
+.center::before {
+  position: absolute;
+  content: "中";
+  top: -64px;
+  right: 0px;
+  left: 8px;
+}
+
+.end {
+  position: relative;
+}
+
+.end::before {
+  position: absolute;
+  content: "高";
+  top: -34px;
+  left: 38px;
+}
+
+ul,
+li {
+  top: 20px;
+  list-style: none;
+}
